@@ -27,7 +27,7 @@ N_disp=5
 app=Flask(__name__)
 app1= dash.Dash(__name__,server=app, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-@server.route("/",methods={'POST'})
+@app.route("/",methods={'POST'})
 def index():
     global rowcount
     args = request.args
